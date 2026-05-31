@@ -1,0 +1,214 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 55px 20px 40px 20px;  /* Reduced bottom padding */
+    background: white;
+}
+
+h1 {
+    font-size: 34px;
+    margin-bottom: 6px;
+}
+
+header p {
+    font-size: 16px;
+    color: #475569;
+}
+
+.buttons {
+    margin-top: 15px; /* reduced */
+}
+
+.btn {
+    display: inline-block;
+    margin: 6px;
+    padding: 10px 20px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+/* Sections */
+section {
+    padding: 30px 20px; /* reduced from 40px */
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 15px; /* reduced */
+    font-size: 22px;
+}
+
+/* Snapshot Grid */
+.snapshot .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    text-align: center;
+    margin-top: 10px; /* reduced */
+}
+
+.snapshot .grid div {
+    background: white;
+    padding: 14px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    font-size: 14px;
+}
+
+/* Skills Grid */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.skills div {
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.skills h3 {
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 18px;
+    margin-bottom: 12px; /* reduced */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    margin-bottom: 4px;
+    font-size: 17px;
+}
+
+.date {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+.card ul {
+    padding-left: 18px;
+    margin-top: 6px;
+}
+
+.card ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #e2e8f0;
+    font-size: 14px;
+}
+
+/* Sidebar - Desktop */
+.sidebar {
+    position: fixed;
+    right: 20px;
+    top: 40%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.sidebar a {
+    background: #1e293b;
+    color: white;
+    padding: 9px 12px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 12px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: #2563eb;
+}
+
+/* Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    header {
+        padding: 45px 15px 30px 15px;
+    }
+
+    section {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .sidebar {
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+        top: auto;
+        transform: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-content: flex-end;
+    }
+
+    .sidebar a {
+        font-size: 11px;
+        padding: 7px 9px;
+    }
+}
